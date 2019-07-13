@@ -1,8 +1,8 @@
 #!/bin/bash
-# author: Se7en
+# author:Se7en
 # url:www.se7ensec.cn
 
-read -p "ÇëÊäÈëÒª¼ì²âµÄÍøÖ·£º" url
+read -p "è¯·è¾“å…¥è¦æ£€æµ‹çš„ç½‘å€ï¼š" url
 while [[ $str != 'exit' ]]
 do
 
@@ -16,19 +16,19 @@ do
 	echo  -e "|  /\_/'      \ \_,__/\ \_\ \__\        [\033[5;31mFool-WPScan.sh\033[0m]        | " 
 	echo "|  \//'        \/___/  \/_/\/__/        HTTPS://WWW.SE7ENSEC.CN | "
 	echo "+---------------------------------------------------------------+ "
-	echo "Ã¶¾ÙÕË»§£º1"
-	echo "±¬ÆÆÃÜÂë£º2"
-	echo "Ã¶¾Ù´æÔÚÂ©¶´²å¼ş£º3"
-	echo "Ã¶¾Ù´æÔÚÂ©¶´Ö÷Ìâ£º4"
-	echo "ÍË³ö£ºexit"
-	read -p "ÇëÊäÈëÑ¡Ïî£º" str
+	echo "æšä¸¾è´¦æˆ·ï¼š1"
+	echo "çˆ†ç ´å¯†ç ï¼š2"
+	echo "æšä¸¾å­˜åœ¨æ¼æ´æ’ä»¶ï¼š3"
+	echo "æšä¸¾å­˜åœ¨æ¼æ´ä¸»é¢˜ï¼š4"
+	echo "é€€å‡ºï¼šexit"
+	read -p "è¯·è¾“å…¥é€‰é¡¹ï¼š" str
 	case $str in
 		1)
 			wpscan --url $url --enumerate u
 			;;
 		2)
-			read -p "ÇëÊäÈëÖ¸¶¨ÕËºÅ£º" username
-			read -p "ÇëÊäÈë×ÖµäÂ·¾¶£º" password
+			read -p "è¯·è¾“å…¥æŒ‡å®šè´¦å·ï¼š" username
+			read -p "è¯·è¾“å…¥å­—å…¸è·¯å¾„ï¼š" password
 			wpscan --url $url  -P $password -U $username
 			;;
 		3)
