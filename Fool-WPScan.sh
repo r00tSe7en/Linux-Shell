@@ -25,11 +25,11 @@ do
 	read -p "请输入选项：" str
 	case $str in
 		1)
-			wpscan --url $url --enumerate u
+			wpscan --url $url --enumerate u --rua
 			;;
 		2)
 			read -p "请输入字典路径：" password
-			wpscan --url $url  -e u -P $password --rua
+			wpscan --url $url -e u -P $password --rua
 			;;
 		3)
 			wpscan --url $url --enumerate vp --rua
