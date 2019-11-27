@@ -1,6 +1,6 @@
 #!/bin/bash
 # author:Se7en
-# url:www.se7ensec.cn
+#使用方法【. Fool-WPScan.sh】
 
 read -p "请输入要检测的网址：" url
 while [[ $str != 'exit' ]]
@@ -39,6 +39,7 @@ do
 			;;
 		5)
 			wpscan --url $url --enumerate tt --rua
+			;;
 	esac
 done
 unset url
