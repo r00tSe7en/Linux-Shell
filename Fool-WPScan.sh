@@ -20,6 +20,7 @@ do
 	echo "爆破密码：2"
 	echo "枚举存在漏洞插件：3"
 	echo "枚举存在漏洞主题：4"
+	echo "TimThumbs文件漏洞：5"
 	echo "退出：exit"
 	read -p "请输入选项：" str
 	case $str in
@@ -27,16 +28,17 @@ do
 			wpscan --url $url --enumerate u
 			;;
 		2)
-			read -p "请输入指定账号：" username
 			read -p "请输入字典路径：" password
-			wpscan --url $url  -P $password -U $username
+			wpscan --url $url  -e u -P $password --rua
 			;;
 		3)
-			wpscan --url $url --enumerate vp
+			wpscan --url $url --enumerate vp --rua
 			;;
 		4)
-			wpscan --url $url --enumerate vt
+			wpscan --url $url --enumerate vt --rua
 			;;
+		5)
+			wpscan --url $url --enumerate tt --rua
 	esac
 done
 unset url
