@@ -1,11 +1,9 @@
 #!/bin/bash
 # author:Se7en
 #使用方法【. Fool-WPScan.sh】
-
 read -p "请输入要检测的网址：" url
 while [[ $str != 'exit' ]]
 do
-
     echo "+---------------------------------------------------------------+ "
     echo "| Talk is cheap , Show me the code.       /\                    | "
     echo "| ________  __          __               (@@) /)                | "   
@@ -29,7 +27,7 @@ do
             ;;
         2)
             read -p "请输入字典路径：" password
-	    read -p "请输入爆破线程：" threads
+            read -p "请输入爆破线程：" threads
             wpscan --url $url -e u -P $password --max-threads $threads --rua
             ;;
         3)
